@@ -178,9 +178,11 @@ function DetermineTitleMenu()
 	end
 	-- "Dance".. (not ThemePrefs.Get("TitleMenuType") and "Battle,Nonstop" or "") ..",Fitness,Records,Jukebox,EditMenu,Options,Exit"
 	if not ThemePrefs.Get("TitleMenuType") then
-		choices = choices .. "Fitness,EditMenu,Records,Options,Exit"
+		--choices = choices .. "Fitness,EditMenu,Records,Options,Exit" //not suitable for arcade use
+		choices = choices .. "Fitness,Records"
 	else
-		choices = choices .. "Fitness,Records,Jukebox,EditMenu,Options,Exit"
+		--choices = choices .. "Fitness,Records,Jukebox,EditMenu,Options,Exit" //not suitable for arcade use
+		choices = choices .. "Fitness,Records,Jukebox"
 	end
 	return choices
 end
